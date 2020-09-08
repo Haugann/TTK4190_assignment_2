@@ -1,5 +1,4 @@
-clear
-clc
+clear; clc;
 %% Variable declarations
 a1_phi = 2.87;
 a2_phi = -0.65;
