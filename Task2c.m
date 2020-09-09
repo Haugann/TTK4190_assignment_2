@@ -25,6 +25,17 @@ for i = 1:length(K)
     end
 end
 
-    
+%% Generating root locus plot
+figure()
 
+subplot(1,2,1)
+rlocusplot(H, K_i, 'b');
+title('Positive values of $K_{\phi_i}$','Interpreter','latex', 'fontsize', 16);
+xlabel('Im'); ylabel('Re')
 
+subplot(1,2,2)
+rlocusplot(H, -K_i, 'r');
+title('Negative values of $K_{\phi_i}$','Interpreter','latex', 'fontsize', 16);
+xlabel('Im'); ylabel('Re')
+
+set(findall(gcf,'Type','line'),'LineWidth', 1.5)
